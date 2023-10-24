@@ -1,53 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Interactive ABCs of CSS Technology</title>
   </head>
   <body>
-    <div id="h1">
-      <header>
-        <h1>
-          Welcome to the Interactive ABCs of CSS Technology Learning Website
-        </h1>
-      </header>
-    </div>
-
-    <div id="h2">
-      <header>
-        <h2>
+    <div class="container">
+      <div class="text-container">
+        <p>
+          Welcome to the Interactive ABCs of CSS Technology learning Website
+        </p>
+      </div>
+      <div class="text-container">
+        <p>
           Click on the buttons below to reveal and learn the CSS technology
-          features of the corresponding letters.
-        </h2>
-      </header>
-    </div>
+          features of the corresponding letters
+        </p>
+      </div>
+      <!-- All image containers -->
+      <div class="img-container" id="a-container">
+        <img
+          id="img-a"
+          src="images/css-letter-a.png"
+          alt="A for aspect-ratio"
+          class="hidden"
+        />
+        <button class="hide-button hidden" onclick="hideImage('a')">
+          Hide Result
+        </button>
+        <button onclick="revealFeature('a')">A</button>
+      </div>
 
-    <div id="buttons">
-      <button id="btnA" class="orange-outline" data-letter="A">A</button>
-      <button id="btnB" class="orange-outline" data-letter="B">B</button>
-      <button id="btnC" class="orange-outline" data-letter="C">C</button>
-    </div>
-    <div id="result">
-      <button id="hideResult" onclick="hideImage()" style="display: none">
-        Hide Result
-      </button>
-      <img
-        id="resultImage"
-        src="images/css-letter-a.png"
-        alt=""
-        style="display: none"
-      />
-      <img
-        id="resultImage"
-        src="images/css-letter-b.png"
-        alt=""
-        style="display: none"
-      />
-      <img
-        id="resultImage"
-        src="images/css-letter-c.png"
-        alt=""
-        style="display: none"
-      />
+      <div class="img-container" id="b-container">
+        <img
+          id="img-b"
+          src="images/css-letter-b.png"
+          alt="B for border"
+          class="hidden"
+        />
+        <button class="hide-button hidden" onclick="hideImage('b')">
+          Hide Result
+        </button>
+        <button onclick="revealFeature('b')">B</button>
+      </div>
+
+      <div class="img-container" id="c-container">
+        <img
+          id="img-c"
+          src="images/css-letter-c.png"
+          alt="C for colors"
+          class="hidden"
+        />
+        <button class="hide-button hidden" onclick="hideImage('c')">
+          Hide Result
+        </button>
+        <button onclick="revealFeature('c')">C</button>
+      </div>
     </div>
     <script src="js/script.js"></script>
   </body>

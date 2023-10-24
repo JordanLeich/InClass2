@@ -22,19 +22,15 @@
     </div>
 
     <div id="buttons">
-      <button id="btnA" class="orange-outline" onclick="showImage('A')">
-        A
-      </button>
-      <button id="btnB" class="orange-outline" onclick="showImage('B')">
-        B
-      </button>
-      <button id="btnC" class="orange-outline" onclick="showImage('C')">
-        C
-      </button>
+      <button id="btnA" class="orange-outline" data-letter="A">A</button>
+      <button id="btnB" class="orange-outline" data-letter="B">B</button>
+      <button id="btnC" class="orange-outline" data-letter="C">C</button>
     </div>
     <div id="result">
-      <button id="hideResult" onclick="hideImage()">Hide Result</button>
-      <img id="resultImage" src="" alt="" />
+      <button id="hideResult" onclick="hideImage()" style="display: none">
+        Hide Result
+      </button>
+      <img id="resultImage" src="" alt="" style="display: none" />
     </div>
     <script src="js/script.js"></script>
   </body>

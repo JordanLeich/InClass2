@@ -1,34 +1,34 @@
-function showImage(letterA) {
-  const resultImage = document.getElementById("resultImage");
-  const hideResult = document.getElementById("hideResult");
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".orange-outline");
 
-  resultImage.src = `../images/css-letter-a.png`;
-  resultImage.style.display = "block";
-  hideResult.style.display = "block";
-}
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const letter = this.getAttribute("data-letter");
+      if (!this.hasAttribute("data-clicked")) {
+        const img = document.createElement("img");
+        img.src = `../images/css-letter-${letter}.png`;
+        img.className = "letter-image";
+        img.style.display = "block";
 
-function showImage(letterB) {
-  const resultImage = document.getElementById("resultImage");
-  const hideResult = document.getElementById("hideResult");
+        const container = document.createElement("div");
+        container.className = "button-container";
 
-  resultImage.src = `../images/css-letter-b.png`;
-  resultImage.style.display = "block";
-  hideResult.style.display = "block";
-}
+        // Hide Result button for each image
+        const hideResult = document.createElement("button");
+        hideResult.textContent = "Hide Result";
+        hideResult.className = "hideResult";
+        hideResult.addEventListener("click", function () {
+          img.style.display = "none";
+          hideResult.style.display = "none";
+          button.removeAttribute("data-clicked");
+        });
 
-function showImage(letterC) {
-  const resultImage = document.getElementById("resultImage");
-  const hideResult = document.getElementById("hideResult");
+        container.appendChild(img);
+        container.appendChild(hideResult);
 
-  resultImage.src = `../images/css-letter-c.png`;
-  resultImage.style.display = "block";
-  hideResult.style.display = "block";
-}
-
-function hideImage() {
-  const resultImage = document.getElementById("resultImage");
-  const hideResult = document.getElementById("hideResult");
-
-  resultImage.style.display = "none";
-  hideResult.style.display = "none";
-}
+        this.parentNode.insertBefore(container, this);
+        this.setAttribute("data-clicked", "true");
+      }
+    });
+  });
+});

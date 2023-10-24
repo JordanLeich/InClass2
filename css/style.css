@@ -9,38 +9,51 @@ header {
   color: black;
   text-align: center;
   padding: 20px;
-  font-size: smaller;
 }
 
-#instruction {
-  text-align: center;
-  margin: 20px;
-  color: black;
+#h1 {
+  border: 2px solid orange;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: small;
+}
+
+#h2 {
+  border: 2px solid orange;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  font-size: medium;
 }
 
 #buttons {
   text-align: center;
   display: flex;
-  justify-content: space-between; /* Arrange buttons from left to right with spacing */
-  flex-wrap: wrap; /* Allow buttons to wrap to the next line if needed */
-  padding-top: 40px; /* Add spacing above the buttons */
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 400px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   color: black;
-  margin-bottom: 40px; /* Add spacing between buttons and images */
+  margin-bottom: 40px;
   width: 150px;
 }
 
 #resultImage {
   max-width: 100%;
-  display: none;
-  margin-top: 40px; /* Add spacing above the image */
+  margin-top: 40px;
 }
 
-/* Add these styles for the transparent text boxes with individual orange outlines */
 .orange-outline {
   background: transparent;
   border: 2px solid orange;
@@ -48,25 +61,4 @@ button {
   border-radius: 5px;
   color: black;
   font-weight: bold;
-}
-
-/* Add these styles for the instructions grid orange outline */
-#h1 {
-  background: transparent;
-  border: 2px solid orange;
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  margin: 10px;
-}
-
-#h2 {
-  background: transparent;
-  border: 2px solid orange;
-  padding: 10px;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  margin: 10px;
 }

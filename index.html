@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div id="h1">
+      <header>
+        <h1>
+          Welcome to the Interactive ABCs of CSS Technology Learning Website
+        </h1>
+      </header>
+    </div>
+
+    <div id="h2">
+      <header>
+        <h2>
+          Click on the buttons below to reveal and learn the CSS technology
+          features of the corresponding letters.
+        </h2>
+      </header>
+    </div>
+
+    <div id="buttons">
+      <button id="btnA" class="orange-outline" onclick="showImage('A')">
+        A
+      </button>
+      <button id="btnB" class="orange-outline" onclick="showImage('B')">
+        B
+      </button>
+      <button id="btnC" class="orange-outline" onclick="showImage('C')">
+        C
+      </button>
+    </div>
+    <div id="result">
+      <button id="hideResult" onclick="hideImage()">Hide Result</button>
+      <img id="resultImage" src="" alt="" />
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const letter = this.getAttribute("data-letter");
       if (!this.hasAttribute("data-clicked")) {
         const img = document.createElement("img");
-        img.src = `images/css-letter-${letter}.png`;
+        img.src = `../images/css-letter-${letter}.png`;
         img.className = "letter-image";
         img.style.display = "block";
 
